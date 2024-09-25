@@ -16,15 +16,15 @@ public:
 	ABasePawn();
 	// Called every frame
 
-protected:
+public:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	class UCapsuleComponent* CapsuleComp; //Collider Component
+	class UCapsuleComponent* CapsuleComp;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	class UStaticMeshComponent* MeshComponent; // Mesh Component
+	class UStaticMeshComponent* MeshComponent;
 	
 	FVector Gravity = FVector(0.0f, 0.0f, -980.0f); // Unreal's default gravity is -980 units/sec^2
 	FVector CurrentVelocity;

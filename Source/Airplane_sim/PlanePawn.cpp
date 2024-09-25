@@ -6,11 +6,12 @@
 #include "Math/UnrealMathUtility.h"
 #include "GameFramework/FloatingPawnMovement.h"
 #include "GameFramework/PawnMovementComponent.h"
+#include "Components/CapsuleComponent.h"
 
 APlanePawn::APlanePawn()
 {
     SpringArmComponent = CreateDefaultSubobject<USpringArmComponent>(TEXT("Spring Arm Component"));
-    SpringArmComponent->SetupAttachment(RootComponent); 
+    SpringArmComponent->SetupAttachment(CapsuleComp); 
 
     SpringArmComponent->TargetArmLength = 1800.0f;
     SpringArmComponent->bUsePawnControlRotation = false;
